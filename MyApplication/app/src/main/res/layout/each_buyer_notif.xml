@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <soup.neumorphism.NeumorphCardView
+        style="@style/Widget.Neumorph.CardView"
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:neumorph_backgroundColor="#E7F0FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/fav">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_pic2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/username2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic2"
+                app:layout_constraintTop_toTopOf="@+id/profile_pic2" />
+
+            <TextView
+                android:id="@+id/date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="5dp"
+                android:text="25/09/2022"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic2"
+                app:layout_constraintTop_toBottomOf="@+id/username2" />
+
+            <ImageView
+                android:id="@+id/droppingarea_image"
+                android:layout_width="101dp"
+                android:layout_height="77dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.052"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_pic2"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/damit1" />
+
+            <TextView
+                android:id="@+id/da_requestCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="28dp"
+                android:ems="15"
+                android:text="Buyer Names"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/mapAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/droppingarea_image"
+                app:layout_constraintTop_toBottomOf="@+id/date2"
+                app:layout_constraintVertical_bias="0.16" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Parcel Dropped!"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/da_requestCaption"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.048"
+                app:layout_constraintStart_toEndOf="@+id/droppingarea_image"
+                app:layout_constraintTop_toBottomOf="@+id/date2"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/order_rec"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="52dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:text="order received"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapAddress"
+                app:neumorph_backgroundColor="#E7F0FF" />
+
+            <EditText
+                android:id="@+id/mapAddress"
+                android:layout_width="300dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:hint="Enter DA Address"
+                android:inputType="textPersonName"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/droppingarea_image" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/searchMap"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-light"
+                android:text="Search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/mapAddress"
+                app:layout_constraintHorizontal_bias="0.052"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapAddress"
+                app:layout_constraintVertical_bias="0.0"
+                app:neumorph_backgroundColor="#E7F0FF" />
+
+            <soup.neumorphism.NeumorphImageButton
+                style="@style/Widget.Neumorph.ImageButton"
+                android:id="@+id/buyernotif_delte"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                app:neumorph_backgroundColor="@color/light_background"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/delete" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
